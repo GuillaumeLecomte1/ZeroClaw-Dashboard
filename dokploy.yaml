@@ -1,0 +1,15 @@
+name: ZeroClaw-Dashboard
+version: 1.0.0
+
+build:
+  buildCommand: bun run build
+  outputDirectory: dist
+  installCommand: bun install
+
+server:
+  port: 5173
+  type: web
+
+env:
+  - key: VITE_ZEROCLAW_TOKEN
+    value: ${ZEROCLAW_TOKEN}

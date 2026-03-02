@@ -1,0 +1,18 @@
+services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - VITE_ZEROCLAW_TOKEN=${VITE_ZEROCLAW_TOKEN}
+      - ZEROCLAW_TOKEN=${ZEROCLAW_TOKEN}
+      - ZEROCLAW_API_URL=${ZEROCLAW_API_URL:-http://localhost:3033}
+      - VITE_APP_API_URL=http://localhost:3001
+    volumes:
+      - ./server:/app/server:ro
+      - ./dist:/app/dist:ro
+    restart: unless-stopped

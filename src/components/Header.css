@@ -1,0 +1,59 @@
+.header {
+  height: 64px;
+  min-height: 64px;
+  background: #16213e;
+  border-bottom: 1px solid #2d2d44;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.header-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #1a1a2e;
+  border-radius: 20px;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.status-indicator[data-status="connected"] {
+  background: #00d26a;
+  box-shadow: 0 0 8px rgba(0, 210, 106, 0.6);
+}
+
+.status-indicator[data-status="disconnected"] {
+  background: #f44336;
+  box-shadow: 0 0 8px rgba(244, 67, 54, 0.6);
+}
+
+.status-indicator[data-status="checking"] {
+  background: #ffc107;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.status-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #a0a0b8;
+}

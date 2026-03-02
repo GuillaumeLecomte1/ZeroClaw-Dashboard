@@ -1,0 +1,81 @@
+.cli-panel {
+  display: flex;
+  height: calc(100vh - 64px - 48px);
+  min-height: 500px;
+  gap: 0;
+}
+
+.cli-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+  min-width: 0;
+}
+
+.cli-input-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0a0a0f;
+  border: 1px solid #1a1a28;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.cli-input-prompt {
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Consolas', monospace;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #00ff88;
+  flex-shrink: 0;
+}
+
+.cli-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Consolas', monospace;
+  font-size: 0.875rem;
+  color: #ffffff;
+  min-width: 0;
+}
+
+.cli-input::placeholder {
+  color: #4a4a5e;
+}
+
+.cli-input:disabled {
+  opacity: 0.5;
+}
+
+.cli-execute-btn {
+  padding: 8px 16px;
+  background: #00ff88;
+  color: #0a0a0f;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.cli-execute-btn:hover:not(:disabled) {
+  background: #00cc6e;
+  transform: translateY(-1px);
+}
+
+.cli-execute-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.cli-hint {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #4a4a5e;
+}

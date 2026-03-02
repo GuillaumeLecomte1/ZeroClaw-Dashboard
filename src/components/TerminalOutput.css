@@ -1,0 +1,97 @@
+.terminal-output {
+  flex: 1;
+  background: #0a0a0f;
+  border: 1px solid #1a1a28;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-y: auto;
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Consolas', monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  min-height: 200px;
+  max-height: 400px;
+}
+
+.terminal-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 180px;
+  color: #3d3d50;
+}
+
+.terminal-empty-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  opacity: 0.5;
+}
+
+.terminal-empty-text {
+  font-size: 0.875rem;
+}
+
+.terminal-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terminal-line-time {
+  color: #4a4a5e;
+  font-size: 0.6875rem;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.terminal-line-prompt {
+  flex-shrink: 0;
+  font-weight: 600;
+  width: 16px;
+  text-align: center;
+}
+
+.terminal-line-content {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  flex: 1;
+}
+
+/* Input lines - green text */
+.terminal-line--input .terminal-line-prompt,
+.terminal-line--input .terminal-line-content {
+  color: #00ff88;
+}
+
+/* Output lines - muted white */
+.terminal-line--output .terminal-line-prompt,
+.terminal-line--output .terminal-line-content {
+  color: #b0b0c0;
+}
+
+/* Error lines - red text */
+.terminal-line--error .terminal-line-prompt,
+.terminal-line--error .terminal-line-content {
+  color: #ff4757;
+}
+
+/* System lines - yellow/amber text */
+.terminal-line--system .terminal-line-prompt,
+.terminal-line--system .terminal-line-content {
+  color: #ffa502;
+}

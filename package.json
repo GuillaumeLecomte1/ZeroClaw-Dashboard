@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "server": "bun run server/index.ts",
+    "server:dev": "bun --watch run server/index.ts"
   },
   "dependencies": {
     "@effect/io": "^0.41.2",
@@ -18,15 +20,28 @@
     "@tanstack/react-query": "^5",
     "@tanstack/react-query-devtools": "^5",
     "@tanstack/react-router": "^1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
     "effect": "^3.19.19",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "nodemailer": "^8.0.1",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^16.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@playwright/test": "^1.58.2",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/express-rate-limit": "^6.0.2",
     "@types/node": "^24.10.1",
+    "@types/nodemailer": "^7.0.11",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "@vitejs/plugin-react": "^5.1.1",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",

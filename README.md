@@ -71,3 +71,20 @@ export default defineConfig([
   },
 ])
 ```
+
+## Deployment
+
+### Dokploy
+
+This project is configured for deployment with [Dokploy](https://dokploy.com/).
+
+1. Push your code to a Git repository
+2. In Dokploy, create a new project and link your Git repository
+3. Add the environment variable in Dokploy dashboard:
+   - `ZEROCLAW_TOKEN`: Your ZeroClaw API token from https://app.zeroclaw.ai/settings
+4. The deployment will automatically:
+   - Install dependencies with `bun install`
+   - Build the application with `bun run build`
+   - Serve the static files from the `dist` directory on port 5173
+
+The `dokploy.yaml` file contains all the deployment configuration.
