@@ -7,8 +7,9 @@ build:
   installCommand: bun install
 
 server:
-  port: 5173
+  port: 4173
   type: web
+  startCommand: bun run preview
 
 env:
   - key: VITE_ZEROCLAW_TOKEN
