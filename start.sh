@@ -1,2 +1,3 @@
 #!/bin/bash
-exec bun run preview --host --port 4173
+PORT=${PORT:-4173}
+exec bun run preview --host --port $PORT
